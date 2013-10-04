@@ -1,0 +1,5 @@
+https://bitbucket.org/kevglass/slick/src/tip/trunk/Slick/src/org/newdawn/slick/tests/shader/ShaderTestAdvanced.java
+
+https://bitbucket.org/kevglass/slick/src/8b65cef30bdc4b71ee24c850a49952bd82b01095/trunk/Slick/src/org/newdawn/slick/tests/shader/ShaderLesson1.java
+
+https://bitbucket.org/kevglass/slick/src/8b65cef30bdc4b71ee24c850a49952bd82b01095/trunk/Slick/src/org/newdawn/slick/tests/shader/ShaderTestAdvanced.java?at=development

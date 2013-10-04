@@ -4,6 +4,8 @@ package hr.zk.common.util.time;
  * User: gbrencic
  * Date: 01.10.13.
  * Time: 15:55
+ *
+ * Counter based on delta time
  */
 public abstract class Counter {
 //TODO srediti

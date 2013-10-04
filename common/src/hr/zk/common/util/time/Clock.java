@@ -7,6 +7,8 @@ import java.util.Date;
  * User: gbrencic
  * Date: 01.10.13.
  * Time: 15:56
+ *
+ * Ingame Time clock based on delta time not system time
  */
 public class Clock {
     private static long timer;

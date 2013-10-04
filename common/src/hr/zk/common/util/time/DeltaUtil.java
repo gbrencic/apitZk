@@ -6,8 +6,7 @@ package hr.zk.common.util.time;
  * Time: 15:54
  */
 public class DeltaUtil {
-    //TODO da ne bude static interface
-    public static float calculateDelta(int delta, int speed) {
+    public float calculateDelta(int delta, int speed) {
         return speed * delta / 1000f;
     }
 }
