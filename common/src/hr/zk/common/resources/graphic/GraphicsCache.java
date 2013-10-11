@@ -11,19 +11,19 @@ import org.newdawn.slick.SpriteSheet;
  * Time: 12:21
  */
 public interface GraphicsCache {
-    boolean containsPackedSpriteSheet(String packedSheetName);
+    boolean doesNotContainPackedSpriteSheet(String packedSheetName);
 
     void addPackedSpriteSheet(String packedSheetName, PackedSpriteSheet packedSpriteSheet);
 
     PackedSpriteSheet getPackedSpriteSheet(String packedSheetName);
 
-    boolean containsSpriteSheet(String sheetName);
+    boolean doesNotContainSpriteSheet(String sheetName);
 
     void addSpriteSheet(String sheetName, SpriteSheet spriteSheet);
 
     SpriteSheet getSpriteSheet(String sheetName);
 
-    boolean comtainsImage(String imageName);
+    boolean doesNotComtainImage(String imageName);
 
     void addImage(String imageName, Image image);
 

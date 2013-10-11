@@ -1,5 +1,7 @@
 package pleasantnightmare.entity;
 
+import hr.zk.common.entity.DefaultRoles;
+
 /**
  * Created by IntelliJ IDEA.
  * User: gbrencic
@@ -17,12 +19,12 @@ public abstract class MovableBody extends Body {
     private float previousPosY;
 
 
-    protected MovableBody(String id, int posX, int posY, BasicRoles role, int speed) {
+    protected MovableBody(String id, int posX, int posY, DefaultRoles role, int speed) {
         super(id, posX, posY, role);
         this.speed = speed;
     }
 
-    protected MovableBody(String id, int posX, int posY, BasicRoles role, int speed, int xVelocity, int yVelocity) {
+    protected MovableBody(String id, int posX, int posY, DefaultRoles role, int speed, int xVelocity, int yVelocity) {
         super(id, posX, posY, role);
         this.xVelocity = xVelocity;
         this.yVelocity = yVelocity;

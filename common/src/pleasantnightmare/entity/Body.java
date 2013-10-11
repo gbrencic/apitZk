@@ -1,5 +1,7 @@
 package pleasantnightmare.entity;
 
+import hr.zk.common.entity.DefaultRoles;
+
 /**
  * Created by IntelliJ IDEA.
  * User: gbrencic
@@ -7,21 +9,22 @@ package pleasantnightmare.entity;
  * Time: 14:58:01
  * To change this template use File | Settings | File Templates.
  */
+@Deprecated
 public abstract class Body {
     protected float posX;
     protected float posY;
 
-    private BasicRoles role;
+    private DefaultRoles role;
     private String id;
 
-    public Body(String id, float posX, float posY, BasicRoles role) {
+    public Body(String id, float posX, float posY, DefaultRoles role) {
         this.posX = posX;
         this.posY = posY;
         this.role = role;
         this.id = id;
     }
 
-      public Body(String id, BasicRoles role) {
+      public Body(String id, DefaultRoles role) {
         this.posX = 0;
         this.posY = 0;
         this.role = role;
@@ -44,11 +47,11 @@ public abstract class Body {
         this.posY = posY;
     }
 
-    public BasicRoles getRole() {
+    public DefaultRoles getRole() {
         return role;
     }
 
-    public void setRole(BasicRoles role) {
+    public void setRole(DefaultRoles role) {
         this.role = role;
     }
 

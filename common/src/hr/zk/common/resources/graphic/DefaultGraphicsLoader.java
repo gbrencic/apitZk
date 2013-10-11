@@ -23,7 +23,7 @@ public final class DefaultGraphicsLoader implements GraphicsLoader {
     @Override
     public void loadPackedSpriteSheet(String packedSheetName) throws ResourceNotFoundException {
         try {
-            if (!graphicsCache.containsPackedSpriteSheet(packedSheetName))
+            if (graphicsCache.doesNotContainPackedSpriteSheet(packedSheetName))
                 graphicsCache.addPackedSpriteSheet(packedSheetName, new PackedSpriteSheet(imageDirectory + packedSheetName + ".def", Image.FILTER_NEAREST));
         } catch (SlickException e) {
             throw new ResourceNotFoundException("Resource: Packed sprite sheet - " + packedSheetName + " NOT FOUND ", e);
@@ -32,7 +32,7 @@ public final class DefaultGraphicsLoader implements GraphicsLoader {
 
     @Override
     public PackedSpriteSheet getPackedSpriteSheet(String packedSheetName) throws ResourceNotFoundException {
-        if (!graphicsCache.containsPackedSpriteSheet(packedSheetName))
+        if (graphicsCache.doesNotContainPackedSpriteSheet(packedSheetName))
             loadPackedSpriteSheet(packedSheetName);
 
         return graphicsCache.getPackedSpriteSheet(packedSheetName);
@@ -41,7 +41,7 @@ public final class DefaultGraphicsLoader implements GraphicsLoader {
     @Override
     public void loadSpriteSheet(String spriteSheetImageName, int width, int height) throws ResourceNotFoundException {
         try {
-            if (!graphicsCache.containsSpriteSheet(spriteSheetImageName))
+            if (graphicsCache.doesNotContainSpriteSheet(spriteSheetImageName))
                 graphicsCache.addSpriteSheet(spriteSheetImageName, new SpriteSheet(imageDirectory + spriteSheetImageName, width, height));
         } catch (SlickException e) {
             throw new ResourceNotFoundException("Resource:  sprite sheet - " + spriteSheetImageName + " NOT FOUND ", e);
@@ -60,7 +60,7 @@ public final class DefaultGraphicsLoader implements GraphicsLoader {
 
     @Override
     public void loadImage(String imageName) throws ResourceNotFoundException {
-        if (!graphicsCache.comtainsImage(imageName))
+        if (graphicsCache.doesNotComtainImage(imageName))
             try {
                 graphicsCache.addImage(imageName, new Image(imageDirectory + imageName));
             } catch (SlickException e) {
@@ -70,7 +70,7 @@ public final class DefaultGraphicsLoader implements GraphicsLoader {
 
     @Override
     public Image getImage(String imageName) throws ResourceNotFoundException {
-        if (!graphicsCache.comtainsImage(imageName))
+        if (graphicsCache.doesNotComtainImage(imageName))
             loadPackedSpriteSheet(imageName);
         return graphicsCache.getImage(imageName);
     }

@@ -1,5 +1,7 @@
 package pleasantnightmare.entity;
 
+import hr.zk.common.entity.DefaultRoles;
+
 /**
  * Created by IntelliJ IDEA.
  * User: gbrencic
@@ -8,7 +10,7 @@ package pleasantnightmare.entity;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class ConstantlyMovableBody extends MovableBody {
-    protected ConstantlyMovableBody(String id, int posX, int posY, BasicRoles role, int speed, int xVelocity, int yVelocity) {
+    protected ConstantlyMovableBody(String id, int posX, int posY, DefaultRoles role, int speed, int xVelocity, int yVelocity) {
         super(id, posX, posY, role, speed, xVelocity, yVelocity);
     }
 

@@ -1,7 +1,7 @@
 package pleasantnightmare.entity;
 
 
-import pleasantnightmare.graphics.Animatable;
+import hr.zk.common.Animatable;
 import pleasantnightmare.level.Level;
 
 /**

@@ -20,7 +20,7 @@ final class DefaultGraphicsCache implements GraphicsCache {
     private final Map<String, Animation> animationMap = new HashMap<String, Animation>();
 
     @Override
-    public boolean containsPackedSpriteSheet(String packedSheetName) {
+    public boolean doesNotContainPackedSpriteSheet(String packedSheetName) {
         return packedSpriteSheetMap.containsKey(packedSheetName);
     }
 
@@ -35,7 +35,7 @@ final class DefaultGraphicsCache implements GraphicsCache {
     }
 
     @Override
-    public boolean containsSpriteSheet(String sheetName) {
+    public boolean doesNotContainSpriteSheet(String sheetName) {
         return spriteSheetMap.containsKey(sheetName);
     }
 
@@ -50,7 +50,7 @@ final class DefaultGraphicsCache implements GraphicsCache {
     }
 
     @Override
-    public boolean comtainsImage(String imageName) {
+    public boolean doesNotComtainImage(String imageName) {
         return imageMap.containsKey(imageName);
     }
 

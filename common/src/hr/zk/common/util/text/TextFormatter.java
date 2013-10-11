@@ -8,7 +8,7 @@ package hr.zk.common.util.text;
 public class TextFormatter {
     //TODO test
     public String insertCharacter(String text, String insert, int position) {
-        StringBuffer sb = new StringBuffer(text);
+        StringBuilder sb = new StringBuilder(text);
         sb.insert(position, insert);
         return sb.toString();
     }

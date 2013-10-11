@@ -9,7 +9,7 @@ package hr.zk.common.util.time;
  */
 public abstract class Counter {
 //TODO srediti
-    private int delay;
+    private final int delay;
     private int counter;
 
     public Counter(int delay) {
