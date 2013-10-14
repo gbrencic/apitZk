@@ -7,9 +7,17 @@ package hr.zk.common.entity;
  */
 public interface Entity {
 
+    Long getId();
+
+    String getName();
+
     float getPosX();
 
     float getPosY();
 
     public Role getRole();
+
+    void setPosX(float posX);
+
+    void setPosY(float posY);
 }

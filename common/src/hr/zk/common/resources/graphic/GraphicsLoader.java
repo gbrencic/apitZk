@@ -28,5 +28,7 @@ public interface GraphicsLoader {
 
     void loadAnimation(String animationName, String packedSheetName, String spriteSheet, int rows, int columns, int speed);
 
+    void loadHorizontaliyFlippedAnimation(String animationName, String packedSheetName, String spriteSheet, int rows, int columns, int speed);
+
     Animation getAnimation(String animationName);
 }

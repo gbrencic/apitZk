@@ -7,5 +7,5 @@ package hr.zk.common.application;
  * Time: 13:43:55
  */
 public interface ApplicationContextAware {
-    void setApplicationContext(ApplicationContext applicationContext);
+
 }

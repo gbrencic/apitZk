@@ -21,7 +21,7 @@ final class DefaultGraphicsCache implements GraphicsCache {
 
     @Override
     public boolean doesNotContainPackedSpriteSheet(String packedSheetName) {
-        return packedSpriteSheetMap.containsKey(packedSheetName);
+        return !packedSpriteSheetMap.containsKey(packedSheetName);
     }
 
     @Override
@@ -36,7 +36,7 @@ final class DefaultGraphicsCache implements GraphicsCache {
 
     @Override
     public boolean doesNotContainSpriteSheet(String sheetName) {
-        return spriteSheetMap.containsKey(sheetName);
+        return !spriteSheetMap.containsKey(sheetName);
     }
 
     @Override
@@ -51,7 +51,7 @@ final class DefaultGraphicsCache implements GraphicsCache {
 
     @Override
     public boolean doesNotComtainImage(String imageName) {
-        return imageMap.containsKey(imageName);
+        return !imageMap.containsKey(imageName);
     }
 
     @Override

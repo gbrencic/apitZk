@@ -43,6 +43,7 @@ public class DefaultEntity implements Entity {
         return posX;
     }
 
+    @Override
     public void setPosX(float posX) {
         this.posX = posX;
     }
@@ -51,6 +52,7 @@ public class DefaultEntity implements Entity {
         return posY;
     }
 
+    @Override
     public void setPosY(float posY) {
         this.posY = posY;
     }

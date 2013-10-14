@@ -12,6 +12,7 @@ public class GraphicsLoaderUsage extends BasicGame {
     //    private GraphicsFactory spriteFactory;
     private GraphicsLoader graphicsLoader;
     private Animation animation;
+    private Animation animationLeft;
 
     public GraphicsLoaderUsage() {
         super("Sprite factory test");
@@ -26,14 +27,20 @@ public class GraphicsLoaderUsage extends BasicGame {
         graphicsLoader.loadImage("mario_simple.png");
         graphicsLoader.loadPackedSpriteSheet("mario_simple");
         graphicsLoader.loadAnimation("marioWalk", "mario_simple", "mario_simple", 1, 4, 200);
+        graphicsLoader.loadHorizontaliyFlippedAnimation("marioWalkLeft", "mario_simple", "mario_simple", 1, 4, 200);
 
         animation = graphicsLoader.getAnimation("marioWalk");
         animation.setPingPong(true);
+
+        animationLeft = graphicsLoader.getAnimation("marioWalkLeft");
+        animationLeft.setPingPong(true);
+
     }
 
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
         animation.update(delta);  //Mora updejtati ina ce ne prati deltu
+        animationLeft.update(delta);  //Mora updejtati ina ce ne prati deltu
     }
 
     @Override
@@ -44,6 +51,9 @@ public class GraphicsLoaderUsage extends BasicGame {
         // draw animation
         animation.draw(20, 280);
         graphics.drawAnimation(animation, 20, 250);
+
+        // draw animation
+        animationLeft.draw(60, 280);
 
     }
 

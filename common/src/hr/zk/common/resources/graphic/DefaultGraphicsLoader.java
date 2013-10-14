@@ -55,7 +55,10 @@ public final class DefaultGraphicsLoader implements GraphicsLoader {
 
     @Override
     public SpriteSheet getSpriteSheet(String packedSheetName, String spriteSheetImageName) throws ResourceNotFoundException {
-        return graphicsCache.getPackedSpriteSheet(packedSheetName).getSpriteSheet(spriteSheetImageName);
+        final PackedSpriteSheet packedSpriteSheet = graphicsCache.getPackedSpriteSheet(packedSheetName);
+        if(null == packedSpriteSheet)
+            return null;  //TODO mozda nesto drugo kao neki missing image bi bilo bolje!
+        return packedSpriteSheet.getSpriteSheet(spriteSheetImageName);
     }
 
     @Override
@@ -87,6 +90,19 @@ public final class DefaultGraphicsLoader implements GraphicsLoader {
 
         graphicsCache.addAnimation(animationName, animation);
     }
+
+    @Override
+        public void loadHorizontaliyFlippedAnimation(String animationName, String packedSheetName, String spriteSheet, int rows, int columns, int speed) {
+            SpriteSheet sheet = getSpriteSheet(packedSheetName, spriteSheet);
+            Animation animation = new Animation();
+            for (int y = 0; y < rows; y++) {
+                for (int x = 0; x < columns; x++) {
+                    animation.addFrame(sheet.getSprite(x, y).getFlippedCopy(true,false), speed);
+                }
+            }
+
+            graphicsCache.addAnimation(animationName, animation);
+        }
 
     @Override                          //TODO exception
     public Animation getAnimation(String animationName) {
